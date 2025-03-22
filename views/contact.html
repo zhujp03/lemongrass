@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- 顶部信息条 -->
+<div class="top-bar">
+    <div class="contact-info">
+        <span>📞 613-233-5000</span>
+<!--        <span>📧 lemongrasselgin@gmail.com</span>-->
+        <span>
+        📧 <a href="mailto:lemongrasselgin@gmail.com" style="color: inherit; text-decoration: none;">lemongrasselgin@gmail.com</a>
+    </span>
+    </div>
+</div>
+
+<!-- 表头 -->
+<header>
+    <div class="navbar">
+        <a href="/" class="logo">
+            <img src="/image/logo.jpg" alt="Lemongrass Thai Cuisine">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/business-hours">BUSINESS HOURS</a></li>
+                <li><a href="/menu">MENU</a></li>
+                <li><a href="/food-pictures">FOOD AND PICTURES</a></li>
+                <li><a href="/contact" class="active">CONTACT US</a></li>
+<!--                <li><a href="/order-online">ORDER ONLINE</a></li>-->
+                <li><a href="https://ottawalemongrass.menu.ca/?p=menu" target="_blank">ORDER ONLINE</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 主内容 -->
+<main>
+    <section class="contact-section">
+        <div class="contact-form-container">
+            <h2>Get In Touch</h2>
+            <p>Prefer to make your reservation via phone? You can make a reservation by calling 613-233-5000.</p>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <input type="text" id="phone" name="phone" placeholder="Mobile Phone" required>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                <div class="captcha-container">
+                    <label for="captcha">What is <span id="captcha-question"></span>?</label>
+                    <input type="text" id="captcha" name="captcha" placeholder="Answer" required>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+
+        <div class="contact-details-container">
+            <img src="/image/logo2.jpg" alt="Lemongrass Logo">
+            <h3>OPENING HOURS</h3>
+            <table>
+                <tr><td>Monday:</td><td>11a.m.–9:30p.m.</td></tr>
+                <tr><td>Tuesday:</td><td>11a.m.–9:30p.m.</td></tr>
+                <tr><td>Wednesday:</td><td>11a.m.–9:30p.m.</td></tr>
+                <tr><td>Thursday:</td><td>11a.m.–9:30p.m.</td></tr>
+                <tr><td>Friday:</td><td>11a.m.–10:30p.m.</td></tr>
+                <tr><td>Saturday:</td><td>11:30a.m.–10:30p.m.</td></tr>
+                <tr><td>Sunday:</td><td>4:30p.m.–9:30p.m.</td></tr>
+            </table>
+            <h3>CONTACT US</h3>
+            <p>📞 613-233-5000</p>
+            <p>📧 lemongrasselgin@gmail.com</p>
+        </div>
+    </section>
+</main>
+
+<script>
+    const captchaQuestion = document.getElementById('captcha-question');
+    const captchaInput = document.getElementById('captcha');
+    let correctAnswer;
+
+    function generateCaptcha() {
+        const num1 = Math.floor(Math.random() * 10);
+        const num2 = Math.floor(Math.random() * 10);
+        captchaQuestion.textContent = `${num1} + ${num2}`;
+        correctAnswer = num1 + num2;
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        if (parseInt(captchaInput.value) !== correctAnswer) {
+            alert('Captcha is incorrect. Please try again.');
+            return;
+        }
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            message: document.getElementById('message').value
+        };
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Email sent successfully!');
+                document.getElementById('contact-form').reset();
+                generateCaptcha();
+            } else {
+                alert('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error sending email. Please check console for details.');
+        }
+    });
+
+    generateCaptcha();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,775 @@
+/*!* 全局样式 *!*/
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*!* 顶部信息条 *!*/
+/*.top-bar {*/
+/*    background-color: #3F714C;*/
+/*    color: white;*/
+/*    padding: 5px 10px;*/
+/*    font-size: 14px;*/
+/*    text-align: right;*/
+/*}*/
+
+/*.top-bar .contact-info span {*/
+/*    margin-left: 15px;*/
+/*}*/
+
+/*!* 表头样式 *!*/
+/*header {*/
+/*    background-color: white;*/
+/*    border-bottom: 1px solid #e0e0e0;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 10px 20px;*/
+/*}*/
+
+/*.navbar {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.logo img {*/
+/*    height: 50px;*/
+/*    display: block;*/
+/*}*/
+
+/*.nav-links {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.nav-links li {*/
+/*    margin: 0 15px;*/
+/*}*/
+
+/*.nav-links a {*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.nav-links a:hover {*/
+/*    color: #3F714C; !* 高亮颜色 *!*/
+/*}*/
+
+/*!* 主内容样式 *!*/
+/*.about {*/
+/*    padding: 3rem 2rem;*/
+/*    background-color: #f9f9f9;*/
+/*}*/
+
+/*.about h1 {*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+/*.about-container {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    gap: 2rem;*/
+/*}*/
+
+/*.about-text {*/
+/*    flex: 1;*/
+/*    max-width: 50%;*/
+/*}*/
+
+/*.about-text p {*/
+/*    font-size: 1rem;*/
+/*    color: #555;*/
+/*    line-height: 1.8;*/
+/*}*/
+
+/*.buttons {*/
+/*    margin-top: 1rem;*/
+/*    display: flex;*/
+/*    gap: 1rem;*/
+/*}*/
+
+/*.button {*/
+/*    display: inline-block;*/
+/*    padding: 0.8rem 1.5rem;*/
+/*    font-size: 1rem;*/
+/*    font-weight: bold;*/
+/*    text-transform: uppercase;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    border-radius: 5px;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.menu-button {*/
+/*    background-color: #3F714C;*/
+/*    color: white;*/
+/*    border: 2px solid #3F714C;*/
+/*}*/
+
+/*.menu-button:hover {*/
+/*    background-color: white;*/
+/*    color: #3F714C;*/
+/*}*/
+
+/*.order-button {*/
+/*    background-color: white;*/
+/*    color: #3F714C;*/
+/*    border: 2px solid #3F714C;*/
+/*}*/
+
+/*.order-button:hover {*/
+/*    background-color: #3F714C;*/
+/*    color: white;*/
+/*}*/
+
+/*.about-image {*/
+/*    flex: 1;*/
+/*    max-width: 45%;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.about-image img {*/
+/*    width: 100%;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*!* 页面其他部分占位样式 *!*/
+/*section {*/
+/*    margin: 20px 0;*/
+/*}*/
+
+
+/*footer {*/
+/*    background-color: #3F714C;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 1rem 0;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*.footer-content {*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    align-items: stretch; !* 确保子元素高度一致 *!*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.footer-content div {*/
+/*    flex: 1;*/
+/*    opacity: 1;*/
+/*    min-width: 200px;*/
+/*    background-color: inherit;*/
+/*    display: flex; !* 使用 flexbox 布局 *!*/
+/*    flex-direction: column; !* 确保内容从上到下排列 *!*/
+/*    justify-content: center; !* 内容垂直居中 *!*/
+/*    align-items: center; !* 内容水平居中 *!*/
+/*    text-align: center; !* 文本对齐方式 *!*/
+/*}*/
+
+/*.footer-content h3 {*/
+/*    font-size: 16px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.footer-content ul {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.footer-content ul li {*/
+/*    font-size: 14px;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+/*!* 响应式设计 *!*/
+/*@media (max-width: 768px) {*/
+/*    .navbar {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .nav-links {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .nav-links li {*/
+/*        margin: 10px 0;*/
+/*    }*/
+
+/*    .footer-content {*/
+/*        flex-direction: column;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .footer-content div {*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .about-container {*/
+/*        flex-direction: column;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .about-text, .about-image {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*}*/
+
+/*!* Business Hours 样式 *!*/
+/*.business-hours {*/
+/*    text-align: center;*/
+/*    padding: 2rem;*/
+/*}*/
+
+/*.business-hours h1 {*/
+/*    font-size: 2.5rem; !* 增大标题字体 *!*/
+/*    margin-bottom: 1.5rem;*/
+/*}*/
+
+/*.business-hours table {*/
+/*    margin: 0 auto;*/
+/*    border-collapse: collapse;*/
+/*    font-size: 1.5rem; !* 增大表格文字大小 *!*/
+/*}*/
+
+/*.business-hours table td {*/
+/*    padding: 0.8rem 2rem; !* 增加表格单元格间距 *!*/
+/*    text-align: left;*/
+/*}*/
+
+/*.business-hours table td:first-child {*/
+/*    font-weight: bold;*/
+/*}*/
+
+
+/*!*menu *!*/
+/*.menu {*/
+/*    text-align: center;*/
+/*    padding: 2rem;*/
+/*}*/
+
+/*.menu-header {*/
+/*    position: relative;*/
+/*    text-align: center;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+/*.menu-header img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
+
+/*.menu-header h1 {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    color: white;*/
+/*    font-size: 3rem;*/
+/*    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+/*}*/
+
+/*.menu-category {*/
+/*    margin-top: 3rem;*/
+/*    text-align: left;*/
+/*    border-bottom: 1px solid #ccc;*/
+/*    padding-bottom: 1rem;*/
+/*}*/
+
+/*.menu-category h2 {*/
+/*    font-size: 2rem;*/
+/*    margin-bottom: 1rem;*/
+/*    color: #3F714C;*/
+/*    text-transform: capitalize;*/
+/*}*/
+
+/*!* 新增：大类别图片样式，长宽不超过 350px *!*/
+/*.menu-category img {*/
+/*    display: block; !* 图片为块级元素 *!*/
+/*    max-width: 350px; !* 图片宽度不能超过容器宽度 *!*/
+/*    max-height: 300px; !* 限制高度为 350px *!*/
+/*    width: auto; !* 自动调整宽度，保持比例 *!*/
+/*    height: auto; !* 自动调整高度，保持比例 *!*/
+/*    margin: 1rem auto; !* 图片居中 *!*/
+/*    border-radius: 8px; !* 可选：圆角效果 *!*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* 可选：阴影效果 *!*/
+/*}*/
+
+/*.menu-item {*/
+/*    margin: 1rem 0;*/
+/*    padding: 1rem;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*    text-align: left;*/
+/*}*/
+
+/*.menu-details h3 {*/
+/*    margin: 0;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.menu-details p {*/
+/*    margin: 0.5rem 0;*/
+/*    color: #555;*/
+/*}*/
+
+/*.menu-details .price span {*/
+/*    display: block;*/
+/*    margin-top: 0.5rem;*/
+/*    font-weight: bold;*/
+/*    color: #3F714C;*/
+/*}*/
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 顶部信息条 */
+.top-bar {
+    background-color: #3F714C;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.top-bar .contact-info span {
+    margin-left: 15px;
+}
+
+/* 表头样式 */
+header {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #3F714C; /* 高亮颜色 */
+}
+
+/* 主内容样式 */
+.about {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center; /* 文本内容居中 */
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 居中内容 */
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center; /* 按钮居中 */
+    gap: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-button {
+    background-color: #3F714C;
+    color: white;
+    border: 2px solid #3F714C;
+}
+
+.menu-button:hover {
+    background-color: white;
+    color: #3F714C;
+}
+
+.order-button {
+    background-color: white;
+    color: #3F714C;
+    border: 2px solid #3F714C;
+}
+
+.order-button:hover {
+    background-color: #3F714C;
+    color: white;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面其他部分占位样式 */
+section {
+    margin: 20px 0;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #3F714C;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.footer-content div {
+    flex: 1;
+    opacity: 1;
+    min-width: 200px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Business Hours 样式 */
+.business-hours {
+    text-align: center;
+    padding: 2rem;
+}
+
+.business-hours h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.business-hours table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+}
+
+.business-hours table td {
+    padding: 0.8rem 2rem;
+    text-align: left;
+}
+
+.business-hours table td:first-child {
+    font-weight: bold;
+}
+
+/* Menu 样式 */
+.menu {
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu-header img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.menu-category {
+    margin-top: 3rem;
+    text-align: center; /* 文本居中 */
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.menu-category h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3F714C;
+    text-transform: capitalize;
+}
+
+/* 大类别图片 */
+.menu-category img {
+    display: block;
+    max-width: 350px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 文本居中 */
+    max-width: 700px;
+}
+
+.menu-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.menu-details p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.menu-details .price span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #3F714C;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container, .menu-category, .menu-item {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .menu-header h1 {
+        font-size: 2rem;
+    }
+
+    .menu-category h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Contact Us 页面样式 */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.contact-form-container,
+.contact-details-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form-container textarea {
+    resize: none;
+}
+
+.contact-form-container button {
+    background-color: #3F714C;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #2a4f37;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.captcha-container input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-details-container {
+    text-align: center;
+}
+
+.contact-details-container img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.contact-details-container table {
+    width: 100%;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.contact-details-container table td {
+    padding: 0.5rem;
+}
+
+.contact-details-container table td:first-child {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.contact-details-container table td:last-child {
+    text-align: left;
+}
+
+
+
+
